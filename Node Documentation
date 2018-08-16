@@ -1,0 +1,10 @@
+1.
+To export a module use module.exports, and equate it to the variable you want to export from a particular file.
+
+For eg.
+In a file movies.js, if you create two functions named A() and B(), you can export one of the functions(A) as
+module.exports.func_A = A
+
+Then we can import this in another file as below:
+var movies = require("./movies")
+movies.func_A();
