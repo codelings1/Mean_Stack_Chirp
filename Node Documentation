@@ -8,3 +8,70 @@ module.exports.func_A = A
 Then we can import this in another file as below:
 var movies = require("./movies")
 movies.func_A();
+
+
+2.
+In ES6:
+We have updated the syntax to directly use a variable inside a string.
+For eg.
+name = "Sarthak"
+character used = ` (the character on the same key as ~)
+string = `My name is ${name}`
+
+3. 
+To add a new line inside your string you just need to press enter where ou need to insert newline.
+For eg.
+string = `Hi There,
+How you doin`
+
+This would print:
+Hi There,
+How you doin.
+
+
+4.
+(...)Spread Operator: If we want to pass all the elements of the array as individuals to a function then we can use spread operator
+as follows:
+function addNumbers(a,b,c){
+  console.log(a+b+c);
+}
+var nums = [3,5,4]
+addNumbers(...nums)
+
+-----
+var meats = [1,2,3]
+var food = [4,...meats,5,6]
+
+5.
+Classes
+class Person{
+
+	constructor(name,age){
+		this.age = age;
+		this.name = name;
+	}
+	display()
+	{
+		console.log(`Name: ${this.name}, Age: ${this.age}`)
+	}
+}
+
+6.
+Inherit classes using extend keyword
+Call parent's constructor inside child's constructor using the keyword super
+
+7.
+Generators are same as in python. The execution stops at some checkpoints which are indicated by keyword yield.	
+Creating a generator function syntax:
+
+function* simpleGenerator(){
+	#...code...
+	yield 
+	....
+	
+	yield
+}
+simpleG = simpleGenerator();
+console.log(simpleG.next());   //the next() specifies that the code needs to be executed upto this checkpoint
+
+							  // the next() function returns an object with fields named value and done. The value is the value of the variable which as been yielded and done is True if it's the last yield statement otherwise false.
