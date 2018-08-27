@@ -1,0 +1,27 @@
+Angular
+
+1.
+-Components are the fundamental building blocks of Angular applications.
+-To generate new components we use the below command
+ng generate component heroes 
+This generates the component named heroes and adds 3 important files to a directory heroes
+		-heroes.component.css	//specify related css here
+		-heroes.component.html	//specify related html here
+		-heroes.component.ts	//this file creates the class and mentions the html and css associations
+		
+-You always import the Component symbol from the Angular core library and annotate the component class with @Component.
+
+-@Component is a decorator function that specifies the Angular metadata for the component.
+
+-The CLI generated three metadata properties:
+
+	-selector— the component's CSS element selector
+	-templateUrl— the location of the component's template file.
+	-styleUrls— the location of the component's private CSS styles.
+	
+-The CSS element selector, 'app-heroes', matches the name of the HTML element that identifies this component within a parent component's template.
+
+-The ngOnInit is a lifecycle hook Angular calls ngOnInit shortly after creating a component. It's a good place to put initialization logic.
+
+-Always export the component class so you can import it elsewhere ... like in the AppModule.
+
